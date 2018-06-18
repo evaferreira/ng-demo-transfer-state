@@ -7,7 +7,10 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { MyMaterialModule } from './mymaterial.module';
+
+// Services
 import { CityWeatherResolverService } from './city-weather-resolver.service';
+import { ContentfulService } from './contentful.service';
 
 @NgModule({
   declarations: [
@@ -25,7 +28,7 @@ import { CityWeatherResolverService } from './city-weather-resolver.service';
       }
     ])
   ],
-  providers: [CityWeatherResolverService],
+  providers: [CityWeatherResolverService, ContentfulService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
